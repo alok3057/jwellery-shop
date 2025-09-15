@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shree Jewellers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Shop Banner -->
+<div class="shop-banner">
+  <img src="/jwellery/images/shop-banner2.jpg" alt="Shree Jewellers Banner">
+</div>
+
+  <!-- Navigation -->
+  <header>
+    <div class="logo">✨ Shree Jewellers</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="admin.html">Admin Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Slideshow -->
+  <section class="hero">
+    <div class="slideshow-container">
+
+      <div class="slides fade">
+        <img src="/jwellery/images/banner1.jpg" alt="Jewellery Banner 1">
+        <div class="caption">Elegant Gold Collection</div>
+      </div>
+
+      <div class="slides fade">
+        <img src="jwellery/images/banner2.jpg" alt="Jewellery Banner 2">
+        <div class="caption">Diamond Necklace Designs</div>
+      </div>
+
+      <div class="slides fade">
+        <img src="images/banner3.jpg" alt="Jewellery Banner 3">
+        <div class="caption">Silver Ornaments</div>
+      </div>
+
+    </div>
+
+    <!-- Dots -->
+    <div class="dots" style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>We are a trusted jewellery shop offering gold, silver, diamond, and custom-made ornaments with top quality and customer satisfaction since 1990.</p>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="/jwellery/images/ring.jpg" alt="Ring">
+        <h3>Gold Ring</h3>
+        <p>₹15,000</p>
+      </div>
+      <div class="product-card">
+        <img src="/jwellery/images/necklace.jpg" alt="Necklace">
+        <h3>Diamond Necklace</h3>
+        <p>₹1,20,000</p>
+      </div>
+      <div class="product-card">
+        <img src="/jwellery/images/earrings.jpg" alt="Earrings">
+        <h3>Silver Earrings</h3>
+        <p>₹5,000</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@shreejewellers.com | Phone: +91-9831316751</p>
+    <p>Address: G.T.road, Baidyabati</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 aloksinha.com. All rights reserved.</p>
+  </footer>
+
+  <!-- Slideshow Script -->
+  <script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("slides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // Change every 4 seconds
+  }
+  </script>
+</body>
+</html>
